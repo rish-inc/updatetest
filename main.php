@@ -1,6 +1,6 @@
 <?php
 /*
-  Plugin Name: Update test
+  Plugin Name: Update test v2.0.0
   Version: 2.0.0
   Update URI: updatetest
  */
