@@ -5,6 +5,14 @@
   Update URI: updatetest
  */
 
+$time_not_changed = isset( $current->last_checked ) && $timeout > ( time() - $current->last_checked );
+// これを追加
+$time_not_changed = false;
+
+if ( $time_not_changed && ! $extra_stats ) {
+	$plugin_changed = false;
+}
+
 define( 'MY_PLUGIN_UPDATE_URL', 'https://api.github.com/repos/rish-inc/updatetest/releases/latest' );
 
 function my_plugin_update_plugin( $update, $plugin_data ) {
